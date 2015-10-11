@@ -1,0 +1,70 @@
+<div class="container">	
+	<ul class="pager">
+		<li class="previous"><a href="#/posts/">← Back to posts</a></li>
+	</ul>
+
+    <section class="post">
+		<h1>
+			{{post.title}} </br>
+		</h1>
+		<p>
+			{{post.link}}
+		</p>
+		<p>
+			{{post.upvotes}}
+		</p>
+		<p ng-repeat="comment in comments">
+			<span>{{comment.data.body}} </span> </br>
+			<span>{{comment.data.author}}</span>  </br>
+			<span>{{comment.data.upvotes}}</span>
+		</p>
+	</section>
+
+	<div class="well">
+	    <h4>Leave a comment</h4>
+	    <!-- TODO: comment form -->
+			<form role="form" class="clearfix">
+			    <div class="col-md-6 form-group">
+			        <label for="name">Name</label>
+			        <input type="text" class="form-control" name="name" placeholder="Enter name">
+			    </div>
+			 
+			    <div class="col-md-6 form-group">
+			        <label for="email">Email</label>
+			        <input type="email" class="form-control" name="email" placeholder="Enter email">
+			    </div>
+
+				<div class="col-md-12 form-group">
+		            <label class="sr-only" for="email">Comment</label>
+		            <textarea class="form-control" id="comment" placeholder="Comment"></textarea>
+		        </div>
+			 
+			    <div class="col-md-12 form-group">
+			        <input type="submit" value="Submit" class="btn btn-primary" />
+			    </div>  
+			</form>
+
+			<ul id="comments" class="comments">
+			    <li class="comment">
+			        <div class="clearfix">
+			            <h4 class="pull-left">John</h4>
+			            <p class="pull-right">9:41 PM on August 24, 2013</p>
+			        </div>
+			        <p>
+			            <em>I don't believe in astrology but still your writing style is really great!</em>
+			        </p>
+			    </li>
+			 
+			    <li class="comment clearfix">
+			        <div class="clearfix">
+			            <h4 class="pull-left">John</h4>
+			            <p class="pull-right">9:41 PM on August 24, 2013</p>
+			        </div>
+			        <p>
+			            <em>I don't believe in astrology but still your writing style is really great!</em>
+			        </p>
+			    </li>
+			</ul>
+		</div>
+	</div>
+

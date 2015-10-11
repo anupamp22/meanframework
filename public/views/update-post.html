@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Post detail</h1>
+  <form novalidate="novalidate" class="form-horizontal">
+   <div class="control-group">
+        <label class="control-label" for="inputTitle">Title:</label>
+        <div class="controls">
+          <input type="text" id="inputTitle" ng-model="post.title" placeholder="Title"/>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <label class="control-label" for="inputContent">Content:</label>
+        <div class="controls">
+          <input type="text" id="inputContent" ng-model="post.content" placeholder="Content"/>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="inputLink">Link:</label>
+        <div class="controls">
+          <input type="text" id="inputLink" ng-model="post.link" placeholder="Link"/>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <label class="control-label" for="inputUpvotes">Upvotes:</label>
+        <div class="controls">
+          <input type="text" id="inputUpvotes" ng-model="post.upvotes" placeholder="Upvotes"/>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <div class="controls">
+          <a ng-click="cancel()" class="btn btn-small">cancel</a>
+          <a ng-click="updatePost()" class="btn btn-small btn-primary">update post</a>
+        </div>
+      </div>
+    </form>
+</div>

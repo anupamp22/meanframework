@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html >
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A Bootstrap Blog Template">
+    	<meta name="author" content="Anupam Priyadarshi">
+
+		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"></link>
+		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css"></link>
+		<link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css"></link>
+		<link rel="stylesheet" href="/stylesheets/style.css"></link>
+		<link rel="stylesheet" href="/stylesheets/global.css"></link>
+
+		<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="/bower_components/angular-resource/angular-resource.js"></script>
+		<!--<script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>-->
+		<script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+		<script type="text/javascript" src="/javascripts/angularApp.js"></script>
+		<script type="text/javascript" src="/javascripts/angularFactory.js"></script>
+		<!--<script type="text/javascript" src="/javascripts/angularServices.js"></script>-->
+		<script type="text/javascript" src="/javascripts/angularControllers.js"></script>
+		<title>Spark Analytics Bloggining App.</title>
+	</head>
+
+	<body ng-app="SparkAnalyticsApp" ui-view>
+		<div class="container">																			
+
+			<div id="header" ui-view="header">
+
+			</div>
+
+			<div ui-view="contact-me">
+
+			</div>
+
+
+			<div ui-view="about-me">
+
+			</div>
+
+
+			<div ui-view="admin">
+
+			</div>
+
+			<div ui-view="post-detail">
+
+			</div>
+
+			<div ui-view="create-post">
+
+			</div>
+
+			<div ui-view="update-post">
+
+			</div>
+
+			<div id="body" class="container row">
+				<!-- <navigationbar></navigationbar> -->	
+				<div class="col-md-8" ui-view="content-1">				
+					<!--<div ng-view></div> -->				
+				</div>
+				<div class="col-md-4">
+					    <div ui-view="subscribe-me">
+
+					    </div>
+
+						<div ui-view="content-2"> 
+			
+						</div>
+
+						<div ui-view="content-3">
+						   
+						</div>
+
+						<div ui-view="content-4">
+						
+						</div>
+						<div ui-view="content-5">
+						 
+						</div>																			    
+				</div>
+			</div>
+			<div ui-view="footer">
+
+			</div>
+		</div>
+	</body>
+
+</html>

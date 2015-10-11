@@ -1,0 +1,27 @@
+jQuery.post("/posts", {
+  "title": "My Awesome T-shirt",  
+  "link": "All about the details. Of course it's black.",
+  "upvotes": 12,  
+  "comments": [  
+    {  
+      "body": "thumbnail comments",  
+      "author": "anupam priyadarshi"  
+    }  
+  ]});
+
+  jQuery.post("/posts", {
+  "title": "test 1",  
+  "link": "test1.com",
+  "upvotes": 12,  
+  "comments": [  
+    {  
+      "body": "thumbnail comments",  
+      "author": "anupam priyadarshi",
+      "upvotes": 12  
+    }  
+  ]});
+
+   db.comments.insert({"body":"test 1", "author":"anupam p","upvotes":1,"post":ObjectId("5605c27c2b2e72e2776d602d")})
+
+   var o = new ObjectId();
+   db.posts.update({"_id":ObjectId("5605c27c2b2e72e2776d602d")}, {$addToSet : {"comments" : [ObjectId("561156c14f379877820b4320")]}});
